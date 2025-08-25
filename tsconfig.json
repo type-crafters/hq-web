@@ -1,0 +1,25 @@
+{
+    "include": [
+        "src/**/*.ts", 
+        "src/**/*.tsx", 
+        "src/**/*.js", 
+        "src/**/*.jsx"
+    ],
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "lib": ["DOM", "DOM.Iterable", "ESNext"],
+        "moduleResolution": "bundler",
+        "jsx": "preserve",
+        "baseUrl": "./",
+        "paths": {
+            "@/*": ["./src/*"],
+            "@components/*": ["./src/components/*"],
+            "@styles/*": ["./src/styles/*"]
+        },
+        "esModuleInterop": true,
+        "strict": true,
+        "skipLibCheck": true
+    },
+    "exclude": ["node_modules", ".next"]
+}

@@ -1,0 +1,31 @@
+{
+    "name": "hq-web",
+    "version": "0.1.0",
+    "author": {
+        "name": "TypeCrafters Web Division (TWD)",
+        "email": "typecrafters0@gmail.com"
+    },
+    "type": "module",
+    "private": false,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/type-crafters/hq-web.git"
+    },
+    "dependencies": {
+        "next": "^15.5.0",
+        "react": "^19.1.1",
+        "react-dom": "^19.1.1"
+    },
+    "devDependencies": {
+        "@tailwindcss/postcss": "^4.1.12",
+        "@types/node": "^24.3.0",
+        "@types/react": "^19.1.11",
+        "@types/react-dom": "^19.1.7",
+        "tailwindcss": "^4.1.12"
+    }
+}
