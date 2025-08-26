@@ -1,14 +1,11 @@
-import { ReactNode, type JSX } from "react";
+import type { ReactNode, JSX } from "react";
 import "@styles/index.css";
 
 export default function IndexLayout({
     children
-}: IndexLayoutProps): JSX.Element {
+}: Readonly<IndexLayoutProps>): JSX.Element {
     return (
-        <html>
-            <head>
-
-            </head>
+        <html lang="en">
             <body>
                 {children} 
             </body>
