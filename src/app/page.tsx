@@ -13,7 +13,7 @@ export default function IndexView(): JSX.Element {
                 <AboutUs />
                 <CurrentProjects />
             </main>
-            <section className="h-screen"></section>
+            <section className="h-screen"></section> {/* Scroll */}
         </>
     );
 }

@@ -1,5 +1,6 @@
 import { JSX } from "react";
 import ContainerSection from "./ContainerSection";
+import ProjectCard from "./ProjectCard";
 
 export default function CurrentProjects(): JSX.Element {
     return (
@@ -13,6 +14,10 @@ export default function CurrentProjects(): JSX.Element {
                     </p>
                 </ContainerSection>
             </div>
+            <ContainerSection size="full" className="grid grid-cols-1 lg:grid-cols-2 gap-8" centered>
+                <ProjectCard />
+                <ProjectCard />
+            </ContainerSection>
         </ContainerSection>
     );
 }

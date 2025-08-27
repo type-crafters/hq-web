@@ -8,7 +8,7 @@ export default function TeamCard({
 }: Readonly<TeamCardProps>): JSX.Element {
     return (
         <figure
-            className="w-full p-4 flex flex-col gap-4 items-center border-2 duration-200 border-secondary-700 bg-secondary-600/20 backdrop-blur-md rounded-lg"
+            className="w-full p-4 flex flex-col gap-4 items-center border-2 border-secondary-700 bg-secondary-600/20 backdrop-blur-md rounded-lg"
         >
             <div
                 className="w-32 h-32 aspect-square rounded-full flex justify-center items-center overflow-hidden"
