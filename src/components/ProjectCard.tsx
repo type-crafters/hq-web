@@ -6,10 +6,10 @@ export default function ProjectCard(): JSX.Element {
         <div className={styles.cardBrighten}>
             <span
                 role="presentation"
-                className="absolute z-10 top-8 left-4 bg-success-600 px-3 rounded text-sm font-semibold py-0.5"
+                className={`${styles.floatLabel} ${styles.labelSuccess}`}
             >In development</span>
             <figure className={styles.figureExpand}>
-                
+
                 <img
                     src="/img/placeholder.svg"
                 />
@@ -27,15 +27,19 @@ export default function ProjectCard(): JSX.Element {
                     aliquid quos voluptatibus ad voluptatem
                     optio nobis, quibusdam ducimus atque!
                 </p>
-                <div className={styles.learnMoreContainer}>
-                    <button
-                        type="button"
-                        className={styles.learnMore}
-                    >
-                        <span>Learn more</span>
-                        <i className="bi bi-box-arrow-up-right text-xs"></i>
-                    </button>
+                <div className={styles.tagContainer}>
+                    <span className={styles.tag}>Servers</span>
+                    <span className={styles.tag}>Channels</span>
+                    <span className={styles.tag}>RTC</span>
                 </div>
+                <button
+                    type="button"
+                    className={styles.learnMore}
+                >
+                    <span>Learn more</span>
+                    <i className="bi bi-box-arrow-up-right"></i>
+                </button>
+
             </div>
         </div>
     );
