@@ -8,23 +8,20 @@ export default function WebsiteHeader(): JSX.Element {
         >
             <nav id="navigation-primary" className="flex items-center w-full">
                 <h1 className="flex-1 text-3xl font-semibold font-sans">
-                    <a href="/">TypeCrafters HQ</a>
+                    <a href="#">TypeCrafters HQ</a>
                 </h1>
                 <ul className="flex items-center gap-8">
                     <li className="hover:text-primary-400 duration-150">
-                        <a href="">About</a>
+                        <a href="#about-us">About</a>
                     </li>
                     <li className="hover:text-primary-400 duration-150">
-                        <a href="">Projects</a>
+                        <a href="#current-projects">Projects</a>
                     </li>
                     <li className="hover:text-primary-400 duration-150">
-                        <a href="">Contact</a>
+                        <a href="#blog">Blog</a>
                     </li>
                     <li className="hover:text-primary-400 duration-150">
-                        <a href="">Blog</a>
-                    </li>
-                    <li className="hover:text-primary-400 duration-150">
-                        <a href=""></a>
+                        <a href="#contact-us">Contact</a>
                     </li>
                 </ul>
             </nav>

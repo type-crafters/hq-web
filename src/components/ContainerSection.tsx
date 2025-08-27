@@ -26,7 +26,7 @@ export default function ContainerSection({
     } as const;
 
     return (
-        <section id={id} className={`px-4 ${centered && "mx-auto"} ${maxWidthMap[size]} ${className}`}>
+        <section id={id} className={`px-4 scroll-mt-20 ${centered && "mx-auto"} ${maxWidthMap[size]} ${className}`}>
             {children}
         </section>
     );

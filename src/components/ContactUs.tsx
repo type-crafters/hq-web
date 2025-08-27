@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function ContactUs(): JSX.Element {
     return (
-        <ContainerSection id="contact" size="container" className="text-center space-y-16" centered>
+        <ContainerSection id="contact-us" size="container" className="text-center space-y-16" centered>
             <div className="space-y-8">
                 <h2 className="text-4xl font-bold">Get In Touch</h2>
                 <ContainerSection size="4xl" className="text-xl text-center" centered>
