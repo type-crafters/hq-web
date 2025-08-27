@@ -1,4 +1,12 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@font-face {
+    src: url('/font/Quicksand-VariableFont_wght.ttf') format('truetype');
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
 
 @theme {
     /* primary */
@@ -26,6 +34,21 @@
     --color-secondary-800: #423f4d;
     --color-secondary-900: #3b3842;
     --color-secondary-950: #2d2b33;
+
+    /* accent */
+    --color-accent-50: #fff2fe;
+    --color-accent-100: #ffe3fe;
+    --color-accent-200: #ffc6fd;
+    --color-accent-300: #ff99f7;
+    --color-accent-400: #ff5df1;
+    --color-accent-500: #ff21f4;
+    --color-accent-600: #e800eb;
+    --color-accent-700: #cf00cd;
+    --color-accent-800: #a900a6;
+    --color-accent-900: #890683;
+    --color-accent-950: #5e005b;
+
+
 
     /* success */
     --color-success-50: #e7fff7;
@@ -78,4 +101,24 @@
     --color-error-800: #a11e0b;
     --color-error-900: #821c0c;
     --color-error-950: #460a04;
+
+    --font-quicksand: Quicksand, 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+:root {
+    font-size: 16px;
+}
+
+html,
+body {
+    color-scheme: dark;
+    background-color: var(--color-secondary-950);
+    color: var(--color-secondary-50);
+    font-family: var(--font-quicksand)
+}
+
+i.bi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

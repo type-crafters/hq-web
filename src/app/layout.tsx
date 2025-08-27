@@ -1,4 +1,5 @@
-import type { ReactNode, JSX } from "react";
+import { ReactNode, JSX } from "react";
+import "bootstrap-icons/font/bootstrap-icons.min.css";
 import "@styles/index.css";
 
 export default function IndexLayout({
