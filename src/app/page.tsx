@@ -4,6 +4,7 @@ import ContactUs from "@/components/ContactUs";
 import CurrentProjects from "@/components/CurrentProjects";
 import HeroBanner from "@/components/HeroBanner";
 import WebsiteHeader from "@components/WebsiteHeader";
+import Footer from "@/components/Footer";
 import { JSX } from "react";
 
 export default function IndexView(): JSX.Element {
@@ -16,8 +17,8 @@ export default function IndexView(): JSX.Element {
                 <CurrentProjects />
                 <Blog />
                 <ContactUs />
+                <Footer />
             </main>
-            <section className="h-screen"></section> {/* Scroll */}
         </>
     );
 }
