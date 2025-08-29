@@ -1,23 +1,21 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-interface Blog {
-  id: number;
-  title: string;
-  date: string;
-  description: string;
-  image?: string;
-  url: string;
-}
-
-interface BlogListProps {
-  blogs: Blog[];
-}
-
-export default function BlogList({ blogs }: BlogListProps) {
+export default function BlogCard({
+  blogs = [
+    {
+      id: 1,
+      title: "Introducing Our New Game: Adventure Quest",
+      date: "2024-06-15",
+      description:
+        "We are thrilled to announce our latest project, Adventure Quest, an epic journey through mystical lands filled with challenges and treasures.",
+      image: "/images/blog/adventure-quest.jpg",
+      url: "#",
+    },
+  ],
+}: Readonly<BlogCardProps>): JSX.Element {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(3);
 
@@ -61,18 +59,21 @@ export default function BlogList({ blogs }: BlogListProps) {
             <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{
-                transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`,
+                transform: `translateX(-${
+                  currentIndex * (100 / itemsPerView)
+                }%)`,
               }}
             >
               {blogs.map((blog) => (
                 <div
                   key={blog.id}
-                  className={`flex-shrink-0 px-3 ${itemsPerView === 1
+                  className={`flex-shrink-0 px-3 ${
+                    itemsPerView === 1
                       ? "w-full"
                       : itemsPerView === 2
-                        ? "w-1/2"
-                        : "w-1/3"
-                    }`}
+                      ? "w-1/2"
+                      : "w-1/3"
+                  }`}
                 >
                   <div className="rounded-2xl overflow-hidden bg-secondary-600/20 border-2 border-secondary-700 shadow-lg hover:shadow-xl transition flex flex-col h-full">
                     {/* Blog Image */}
@@ -85,7 +86,9 @@ export default function BlogList({ blogs }: BlogListProps) {
                           className="object-cover"
                         />
                       ) : (
-                        <span className="text-secondary-400 text-sm">No Image</span>
+                        <span className="text-secondary-400 text-sm">
+                          No Image
+                        </span>
                       )}
                     </div>
 
@@ -163,10 +166,11 @@ export default function BlogList({ blogs }: BlogListProps) {
                   <button
                     key={index}
                     onClick={() => goToSlide(index)}
-                    className={`w-3 h-3 rounded-full transition ${index === currentIndex
+                    className={`w-3 h-3 rounded-full transition ${
+                      index === currentIndex
                         ? "bg-secondary-300"
                         : "bg-secondary-600 hover:bg-secondary-500"
-                      }`}
+                    }`}
                     aria-label={`Go to slide ${index + 1}`}
                   />
                 ))}
@@ -177,4 +181,17 @@ export default function BlogList({ blogs }: BlogListProps) {
       </div>
     </section>
   );
+}
+
+interface Blog {
+  id: number;
+  title: string;
+  date: string;
+  description: string;
+  image?: string;
+  url: string;
+}
+
+interface BlogCardProps {
+  blogs: Blog[];
 }
