@@ -1,0 +1,23 @@
+{
+    "name": "hq-web",
+    "type": "module",
+    "version": "0.1.0",
+    "scripts": {
+        "dev": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "@astrojs/svelte": "^7.1.1",
+        "@tailwindcss/vite": "^4.1.13",
+        "astro": "^5.13.8",
+        "bootstrap-icons": "^1.13.1",
+        "svelte": "^5.38.10",
+        "tailwindcss": "^4.1.13",
+        "typescript": "^5.9.2"
+    },
+    "devDependencies": {
+        "@types/bun": "^1.2.22"
+    }
+}
