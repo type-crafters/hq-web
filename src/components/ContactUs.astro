@@ -16,7 +16,7 @@ import CopyButton from "@components/CopyButton.svelte"
     </div>
     <ContainerSection size="full" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch" centered>
         <div class="w-full">
-            <ContactForm />
+            <ContactForm client:idle />
         </div>
         <div class="w-full flex flex-col gap-8">
             <CopyButton

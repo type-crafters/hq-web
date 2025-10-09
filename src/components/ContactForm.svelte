@@ -1,61 +1,109 @@
 <script lang="ts">
+    import path from "path";
+    import { API_URL } from "astro:env/client";
+
     let firstName: string = $state("");
     let lastName: string = $state("");
     let email: string = $state("");
     let subject: string = $state("");
     let message: string = $state("");
+
+    const submitForm = async (event: SubmitEvent) => {
+        event.preventDefault();
+
+        const data = {
+            firstName,
+            lastName,
+            email,
+            subject,
+            message
+        };
+
+        try {
+            const response = await fetch(`${API_URL}/messages`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+
+            return await response.json();
+        } catch (error) {
+            console.error(error);
+        }
+    };
 </script>
 
-<div class="w-full h-full p-6 flex flex-col gap-6 bg-secondary-600/20 backdrop-blur-md rounded-lg border-2 border-secondary-700">
+<div
+    class="w-full h-full p-6 flex flex-col gap-6 bg-secondary-600/20 backdrop-blur-md rounded-lg border-2 border-secondary-700"
+>
     <div class="text-left space-y-2">
         <h3 class="text-2xl font-semibold">Send us a message</h3>
-        <p class="opacity-70">Fill out the form below and we'll get back to you as soon as possible.</p>
+        <p class="opacity-70">
+            Fill out the form below and we'll get back to you as soon as
+            possible.
+        </p>
     </div>
-    <form class="flex-1 flex flex-col gap-8">
+    <form class="flex-1 flex flex-col gap-8" onsubmit={submitForm}>
         <div class="flex gap-6">
             <div class="flex-1 space-y-2">
-                <label class="block text-left font-semibold" for="firstName">First Name</label>
+                <label class="block text-left font-semibold" for="firstName"
+                    >First Name</label
+                >
                 <input
                     type="text"
                     name="firstName"
                     id="firstName"
                     placeholder="John"
                     bind:value={firstName}
-                    class="w-full border border-secondary-400 bg-secondary-600/40 backdrop-blur-md rounded px-2 py-1 outline-2 outline-transparent focus:outline-secondary-400 duration-150" />
+                    class="w-full border border-secondary-400 bg-secondary-600/40 backdrop-blur-md rounded px-2 py-1 outline-2 outline-transparent focus:outline-secondary-400 duration-150"
+                />
             </div>
             <div class="flex-1 space-y-2">
-                <label class="block text-left font-semibold" for="lastName">Last Name</label>
+                <label class="block text-left font-semibold" for="lastName"
+                    >Last Name</label
+                >
                 <input
                     type="text"
                     name="lastName"
                     id="lastName"
                     placeholder="Doe"
                     bind:value={lastName}
-                    class="w-full border border-secondary-400 bg-secondary-600/40 backdrop-blur-md rounded px-2 py-1 outline-2 outline-transparent focus:outline-secondary-400 duration-150" />
+                    class="w-full border border-secondary-400 bg-secondary-600/40 backdrop-blur-md rounded px-2 py-1 outline-2 outline-transparent focus:outline-secondary-400 duration-150"
+                />
             </div>
         </div>
         <div class="space-y-2">
-            <label class="block text-left font-semibold" for="email">Email</label>
+            <label class="block text-left font-semibold" for="email"
+                >Email</label
+            >
             <input
                 type="email"
                 name="email"
                 id="email"
                 placeholder="john@example.com"
                 bind:value={email}
-                class="w-full border border-secondary-400 bg-secondary-600/40 backdrop-blur-md rounded px-2 py-1 outline-2 outline-transparent focus:outline-secondary-400 duration-150" />
+                class="w-full border border-secondary-400 bg-secondary-600/40 backdrop-blur-md rounded px-2 py-1 outline-2 outline-transparent focus:outline-secondary-400 duration-150"
+            />
         </div>
         <div class="space-y-2">
-            <label class="block text-left font-semibold" for="subject">Subject</label>
+            <label class="block text-left font-semibold" for="subject"
+                >Subject</label
+            >
             <input
                 type="text"
                 name="subject"
                 id="subject"
                 placeholder="What's this about?"
                 bind:value={subject}
-                class="w-full border border-secondary-400 bg-secondary-600/40 backdrop-blur-md rounded px-2 py-1 outline-2 outline-transparent focus:outline-secondary-400 duration-150" />
+                class="w-full border border-secondary-400 bg-secondary-600/40 backdrop-blur-md rounded px-2 py-1 outline-2 outline-transparent focus:outline-secondary-400 duration-150"
+            />
         </div>
         <div class="flex-1 flex flex-col gap-2">
-            <label class="block text-left font-semibold" for="message">Message</label>
+            <label class="block text-left font-semibold" for="message"
+                >Message</label
+            >
             <textarea
                 name="message"
                 id="message"
