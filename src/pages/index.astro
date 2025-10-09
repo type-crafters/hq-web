@@ -1,6 +1,14 @@
 ---
 import "@styles/index.css";
 import "bootstrap-icons/font/bootstrap-icons.min.css";
+
+import HeroBanner from "@components/HeroBanner.astro";
+import WebsiteHeader from "@components/WebsiteHeader.astro";
+import AboutUs from "@components/AboutUs.astro";
+import CurrentProjects from "@components/CurrentProjects.astro";
+import Blog from "@components/Blog.astro";
+import ContactUs from "@components/ContactUs.astro";
+import WebsiteFooter from "@components/WebsiteFooter.astro";
 ---
 
 <!doctype html>
@@ -13,6 +21,14 @@ import "bootstrap-icons/font/bootstrap-icons.min.css";
         <title>Document</title>
     </head>
     <body>
-
+        <WebsiteHeader />
+        <main class="space-y-32">
+            <HeroBanner />
+            <AboutUs />
+            <CurrentProjects />
+            <Blog />
+            <ContactUs />
+            <WebsiteFooter />
+        </main>
     </body>
 </html>

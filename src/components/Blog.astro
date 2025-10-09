@@ -1,0 +1,30 @@
+---
+import ContainerSection from "./ContainerSection.astro";
+---
+
+<ContainerSection
+    id="blog"
+    size="container"
+    class="text-center space-y-4"
+    centered
+>
+    <div class="space-y-8">
+        <h2 class="text-4xl font-bold">Latest from Our Blog</h2>
+        <ContainerSection size="4xl" class="text-xl text-center" centered>
+            <p>
+                Stay updated with our development journey, industry insights,
+                and behind-the-scenes content.
+            </p>
+        </ContainerSection>
+    </div>
+    <!-- BEGIN BLOG POST SHOWCASE -->
+     
+    <!-- END BLOG POST SHOWCASE -->
+    <a
+        href="#"
+        class="flex gap-2 duration-200 bg-primary-600 border-2 border-transparent hover:bg-transparent hover:text-primary-800 hover:border-primary-800 rounded-lg px-6 py-2 w-fit mx-auto"
+    >
+        <span class="text-lg font-medium">View All Posts</span>
+        <i class="bi bi-box-arrow-up-right text-xs"></i>
+    </a>
+</ContainerSection>
