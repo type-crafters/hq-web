@@ -1,1 +1,3 @@
 # TypeCrafters HQ
+
+## Landing Page

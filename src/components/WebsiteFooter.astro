@@ -1,0 +1,51 @@
+---
+import ContainerSection from "./ContainerSection.astro"
+---
+
+<footer id="website-footer" class="flex flex-col bg-secondary-800 backdrop-blur-md shadow-md">
+    <ContainerSection size="7xl" class="flex flex-col gap-8 py-8" centered>
+        <div class="flex-1 w-full grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="col-span-1 md:col-span-2">
+                <div class="w-full leading-8 flex flex-col items-center md:items-start">
+                    <p>TypeCrafters is a small developer team based in Panama.</p>
+                    <p>We are excited to make amazing experiences for developers and gamers.</p>
+                </div>
+            </div>
+            <nav class="col-span-1 justify-center md:col-span-2 flex flex-col items-center md:items-end gap-4">
+                <ul class="flex flex-wrap justify-center md:justify-end gap-x-4 gap-y-2 text-sm md:text-base tracking-wider">
+                    <li class="hover:text-primary-400 duration-150 cursor-pointer">
+                        <a href="#about-us">About</a>
+                    </li>
+                    <li class="hover:text-primary-400 duration-150 cursor-pointer">
+                        <a href="#current-projects">Projects</a>
+                    </li>
+                    <li class="hover:text-primary-400 duration-150 cursor-pointer">
+                        <a href="#blog">Blog</a>
+                    </li>
+                    <li class="hover:text-primary-400 duration-150 cursor-pointer">
+                        <a href="#contact-us">Contact</a>
+                    </li>
+                </ul>
+                <ul class="flex items-center gap-6 text-secondary-400 text-2xl">
+                    <li>
+                        <a href="#" class="text-secondary-400 hover:text-primary-400 duration-150">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-secondary-400 hover:text-primary-400 duration-150">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                    </li>
+                    <a href="#" class="text-secondary-400 hover:text-primary-400 duration-150">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+        <hr class="border-secondary-500" />
+        <div class="text-center text-xs md:text-sm">
+            <div>&copy; {new Date().getFullYear()} TypeCrafters. All rights reserved.</div>
+        </div>
+    </ContainerSection>
+</footer>
