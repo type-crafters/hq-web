@@ -18,6 +18,6 @@
             <h3 class="text-xl font-semibold">{name}</h3>
             <span class="text-primary-400">{role}</span>
         </div>
-        <p>{description}</p>
+        <p class="flex-1">{description}</p>
     </figcaption>
 </figure>

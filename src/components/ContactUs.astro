@@ -20,6 +20,7 @@ import CopyButton from "@components/CopyButton.svelte"
         </div>
         <div class="w-full flex flex-col gap-8">
             <CopyButton
+                client:idle
                 id="copy-email"
                 value="typecrafters0@gmail.com"
                 class="w-full rounded-lg space-y-6 bg-secondary-600/20 backdrop-blur-md border-2 border-secondary-700 p-6"
@@ -33,6 +34,7 @@ import CopyButton from "@components/CopyButton.svelte"
                 </div>
             </CopyButton>
             <CopyButton
+                client:idle
                 id="copy-address"
                 value="https://maps.app.goo.gl/CKzaH9HaE8QzDfjJA"
                 class="w-full rounded-lg space-y-6 bg-secondary-600/20 backdrop-blur-md border-2 border-secondary-700 p-6"
@@ -48,6 +50,7 @@ import CopyButton from "@components/CopyButton.svelte"
                 </div>
             </CopyButton>
             <CopyButton
+                client:idle
                 id="copy-address"
                 value="(+507) 123-4567"
                 class="w-full rounded-lg space-y-6 bg-secondary-600/20 backdrop-blur-md border-2 border-secondary-700 p-6"
