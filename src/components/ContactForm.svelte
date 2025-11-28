@@ -64,7 +64,7 @@
         </p>
     </div>
     <form class="flex-1 flex flex-col gap-8" onsubmit={submitForm}>
-        <div class="flex gap-6">
+        <div class="flex flex-col sm:flex-row gap-6">
             <div class="flex-1 space-y-2">
                 <label class="block text-left font-semibold" for="firstName"
                     >First Name</label

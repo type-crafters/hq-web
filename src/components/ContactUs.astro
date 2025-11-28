@@ -1,20 +1,29 @@
 ---
-import ContainerSection from "@components/ContainerSection.astro"
-import ContactForm from "@components/ContactForm.svelte"
-import CopyButton from "@components/CopyButton.svelte"
+import ContainerSection from "@components/ContainerSection.astro";
+import ContactForm from "@components/ContactForm.svelte";
+import CopyButton from "@components/CopyButton.svelte";
 ---
 
-<ContainerSection id="contact-us" size="container" class="text-center space-y-16" centered>
+<ContainerSection
+    id="contact-us"
+    size="container"
+    class="text-center space-y-16"
+    centered
+>
     <div class="space-y-8">
         <h2 class="text-4xl font-bold">Get In Touch</h2>
         <ContainerSection size="4xl" class="text-xl text-center" centered>
             <p>
-                Have a question, want to collaborate, or just
-                want to say hello? We'd love to hear from you.
+                Have a question, want to collaborate, or just want to say hello?
+                We'd love to hear from you.
             </p>
         </ContainerSection>
     </div>
-    <ContainerSection size="full" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch" centered>
+    <ContainerSection
+        size="full"
+        class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch"
+        centered
+    >
         <div class="w-full">
             <ContactForm client:idle />
         </div>
@@ -23,58 +32,75 @@ import CopyButton from "@components/CopyButton.svelte"
                 client:idle
                 id="copy-email"
                 value="typecrafters0@gmail.com"
-                class="w-full rounded-lg space-y-6 bg-secondary-600/20 backdrop-blur-md border-2 border-secondary-700 p-6"
+                class="w-full rounded-lg bg-secondary-600/20 backdrop-blur-md border-2 border-secondary-700 p-6"
             >
-                <div class="flex gap-4 text-2xl font-semibold">
-                    <i class="bi bi-envelope text-primary-400"></i>
-                    <h3>Email</h3>
-                </div>
-                <div class="opacity-70 text-left text-lg">
-                    <p>typecrafters0@gmail.com</p>
+                <div class="space-y-2">
+                    <div class="flex gap-3 text-2xl font-semibold">
+                        <i class="bi bi-envelope text-primary-400"></i>
+                        <h3>Email</h3>
+                    </div>
+                    <div class="opacity-70 text-left text-lg">
+                        <p>typecrafters0@gmail.com</p>
+                    </div>
                 </div>
             </CopyButton>
             <CopyButton
                 client:idle
                 id="copy-address"
                 value="https://maps.app.goo.gl/CKzaH9HaE8QzDfjJA"
-                class="w-full rounded-lg space-y-6 bg-secondary-600/20 backdrop-blur-md border-2 border-secondary-700 p-6"
+                class="w-full rounded-lg bg-secondary-600/20 backdrop-blur-md border-2 border-secondary-700 p-6"
             >
-                <div class="flex gap-4 text-2xl font-semibold">
-                    <i class="bi bi-geo-alt text-primary-400"></i>
-                    <h3>Office</h3>
-                </div>
-                <div class="opacity-70 text-left text-lg">
-                    <p>1054 Circunvalación St.</p>
-                    <p>Ciudad de Panamá, PA</p>
-                    <p>Panamá</p>
+                <div class="space-y-2">
+                    <div class="flex gap-3 text-2xl font-semibold">
+                        <i class="bi bi-geo-alt text-primary-400"></i>
+                        <h3>Office</h3>
+                    </div>
+                    <div class="opacity-70 text-left text-lg">
+                        <p>1054 Circunvalación St.</p>
+                        <p>Ciudad de Panamá, PA</p>
+                        <p>Panamá</p>
+                    </div>
                 </div>
             </CopyButton>
             <CopyButton
                 client:idle
                 id="copy-address"
                 value="(+507) 123-4567"
-                class="w-full rounded-lg space-y-6 bg-secondary-600/20 backdrop-blur-md border-2 border-secondary-700 p-6"
+                class="w-full rounded-lg bg-secondary-600/20 backdrop-blur-md border-2 border-secondary-700 p-6"
             >
-                <div class="flex gap-4 text-2xl font-semibold">
-                    <i class="bi bi-telephone text-primary-400"></i>
-                    <h3>Phone</h3>
-                </div>
-                <div class="opacity-70 text-left text-lg">
-                    <p>(+507) 123-4567</p>
+                <div class="space-y-2">
+                    <div class="flex gap-3 text-2xl font-semibold">
+                        <i class="bi bi-telephone text-primary-400"></i>
+                        <h3>Phone</h3>
+                    </div>
+                    <div class="opacity-70 text-left text-lg">
+                        <p>(+507) 123-4567</p>
+                    </div>
                 </div>
             </CopyButton>
-            <div class="w-full rounded-lg space-y-6 bg-secondary-600/20 backdrop-blur-md border-2 border-secondary-700 p-6">
+            <div
+                class="w-full rounded-lg space-y-6 bg-secondary-600/20 backdrop-blur-md border-2 border-secondary-700 p-6"
+            >
                 <div class="flex">
                     <h3 class="text-2xl font-semibold">Follow Us</h3>
                 </div>
                 <div class="flex items-center gap-6 text-2xl">
-                    <a href="#" class="text-secondary-400 hover:text-primary-400 duration-150">
+                    <a
+                        href="#"
+                        class="text-secondary-400 hover:text-primary-400 duration-150"
+                    >
                         <i class="bi bi-youtube"></i>
                     </a>
-                    <a href="#" class="text-secondary-400 hover:text-primary-400 duration-150">
+                    <a
+                        href="#"
+                        class="text-secondary-400 hover:text-primary-400 duration-150"
+                    >
                         <i class="bi bi-twitter-x"></i>
                     </a>
-                    <a href="#" class="text-secondary-400 hover:text-primary-400 duration-150">
+                    <a
+                        href="#"
+                        class="text-secondary-400 hover:text-primary-400 duration-150"
+                    >
                         <i class="bi bi-instagram"></i>
                     </a>
                 </div>

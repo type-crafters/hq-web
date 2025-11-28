@@ -1,38 +1,21 @@
 <header
     id="website-header"
-    class="px-12 py-4 border-b border-secondary-500 w-full fixed backdrop-blur-md font-medium shadow-lg sticky top-0 z-45 bg-inherit/50"
+    class="px-6 lg:px-12 py-4 border-b border-secondary-500 w-full backdrop-blur-md font-medium shadow-lg sticky top-0 z-45 bg-inherit/50"
 >
-    <div class="h-full max-w-[90%] mx-auto flex items-center justify-between">
+    <div class="h-full flex items-center justify-between">
         <h1 class="font-black text-xl lg:text-3xl flex items-center justify-start">
-            <a
-                class=" py-2"
-                href="#"
-            >
-                TypeCrafters HQ
-            </>
+            <a href="#">TypeCrafters HQ</a>
         </h1>
 
         <!-- Mobile Menu Button -->
-        <div class="md:hidden">
+        <div class="flex md:hidden items-center">
             <button id="sidebar-icon" aria-label="Open navigation menu">
-                <svg
-                    class="w-8 h-8"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M4 6h16M4 12h16M4 18h16"
-                    ></path>
-                </svg>
+                <i class="bi bi-list text-3xl"></i>
             </button>
         </div>
 
         <!-- Desktop Navigation -->
-        <ul class="hidden md:flex items-center gap-6 lg:gap-5 px-1 py-2 text-sm lg:text-lg">
+        <ul class="hidden md:flex items-center gap-6 lg:gap-5 px-1 text-sm lg:text-lg">
             <li>
                 <a class="hover:text-primary-400 p-2" href="#about-us">About</a>
             </li>
@@ -50,10 +33,10 @@
 </header>
 
 <!-- Mobile Sidebar -->
-<div
+<aside
     id="sidebar"
     role="navigation"
-    class="fixed top-0 right-0 w-[55%] h-full backdrop-blur-md bg-gray-800 from-bg-inherit border-l border-l-slate-800 transform translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden"
+    class="fixed top-0 right-0 w-[55%] h-full backdrop-blur-md bg-secondary-800 from-bg-inherit border-l border-l-secondary-500 transform translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden"
 >
     <div class="py-6">
         <button
@@ -61,58 +44,38 @@
             aria-label="Close navigation menu"
             class="mb-8 pl-6"
         >
-            <svg
-                class="w-8 h-8"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-            >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M6 18L18 6M6 6l12 12"
-                ></path>
-            </svg>
+            <i class="bi bi-x-lg text-xl"></i>
         </button>
 
         <!-- Mobile Navigation Links -->
         <ul class="flex flex-col gap-3 font-medium">
             <li>
-                <a
-                    class="sidebar-link hover:bg-white/10 focus:bg-white/15 py-2 pl-8 block w-full"
+                <a 
                     href="#about-us"
-                >
-                    About
-                </a>
+                    class="sidebar-link hover:bg-white/10 focus:bg-white/15 py-2 pl-8 block w-full"
+                >About</a>
             </li>
             <li>
                 <a
-                    class="sidebar-link hover:bg-white/10 focus:bg-white/15 py-2 pl-8 block w-full"
                     href="#current-projects"
-                >
-                    Projects
-                </a>
+                    class="sidebar-link hover:bg-white/10 focus:bg-white/15 py-2 pl-8 block w-full"
+                >Projects</a>
             </li>
             <li>
                 <a
-                    class="sidebar-link hover:bg-white/10 focus:bg-white/15 py-2 pl-8 block w-full"
                     href="#blog"
-                >
-                    Blog
-                </a>
+                    class="sidebar-link hover:bg-white/10 focus:bg-white/15 py-2 pl-8 block w-full"
+                >Blog</a>
             </li>
             <li>
                 <a
-                    class="sidebar-link hover:bg-white/10 focus:bg-white/15 py-2 pl-8 block w-full"
                     href="#contact-us"
-                >
-                    Contact
-                </a>
+                    class="sidebar-link hover:bg-white/10 focus:bg-white/15 py-2 pl-8 block w-full"
+                >Contact</a>
             </li>
         </ul>
     </div>
-</div>
+</aside>
 
 <script>
     const sidebarIcon = document.getElementById("sidebar-icon");
