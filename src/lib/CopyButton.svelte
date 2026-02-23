@@ -8,25 +8,19 @@
         children?: Snippet;
     }
 
-    const { id, value, class: className, children }: CopyButtonProps = $props();
+    let feedback: boolean = $state(false);
 
-    let renderFeedback: boolean = $state(false);
-
-    const copyValue = () => {
+    const copy = () => {
         navigator.clipboard.writeText(value);
-        renderFeedback = true;
-
-        return setTimeout(() => renderFeedback = false, 5000);
+        feedback = true;
+        return setTimeout(() => feedback = false, 5000);
     };
+
+    const { id, value, class: className, children }: CopyButtonProps = $props();
 </script>
 
-<button
-    id={id} 
-    onclick={copyValue}
-    title={`Copy '${value}'`}
-    class={["relative cursor-pointer", className]}
->
-    {#if renderFeedback}
+<button {id} title="Copy '{value}'" onclick={copy} class="relative cursor-pointer {className}">
+    {#if feedback}
         <span
             role="presentation"
             class="flex items-center gap-1 bg-success-600 rounded absolute top-4 right-4 px-3 py-0.5 text-sm font-semibold"

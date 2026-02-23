@@ -1,15 +1,16 @@
----
-import ContainerSection from "@components/ContainerSection.astro";
----
+<script lang="ts">
+    import Container from "./Container.svelte";
+</script>
 
-<ContainerSection id="hero-banner" size="container" class="py-28 text-center space-y-8" centered>
+
+<Container id="hero-banner" class="py-28 text-center space-y-8" centered>
     <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold">
         Crafting Digital
         <span class="bg-clip-text text-transparent bg-linear-to-r from-0% from-primary-500 to-100% to-accent-600">
             &#32;Adventures
         </span>
     </h1>
-    <ContainerSection size="4xl" class="text-xl text-center space-y-8" centered>
+    <Container maxW="max-w-4xl" class="text-xl text-center space-y-8" centered>
         <p class="w-full">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Voluptatibus quas totam temporibus, dignissimos distinctio inventore
@@ -29,5 +30,5 @@ import ContainerSection from "@components/ContainerSection.astro";
                 </div>
             </button>
         </div>
-    </ContainerSection>
-</ContainerSection>
+    </Container>
+</Container>

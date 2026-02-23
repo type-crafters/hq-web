@@ -1,9 +1,8 @@
----
-import ContainerSection from "./ContainerSection.astro";
----
-
+<script>
+    import Container from "./Container.svelte";
+</script>
 <footer id="website-footer" class="bg-secondary-800 backdrop-blur-md shadow-md">
-    <ContainerSection size="container" class="py-8" centered>
+    <Container class="py-8 space-y-8" centered>
         <div class="flex w-full flex-col md:flex-row gap-8 md:gap-0">
             <div class="flex-1 flex flex-col gap-4 items-start text-center md:text-left *:flex-1">
                 <p class="w-full">TypeCrafters is a small developer team based in Panama.</p>
@@ -26,24 +25,24 @@ import ContainerSection from "./ContainerSection.astro";
                 </ul>
                 <ul class="flex gap-6 text-2xl">
                     <li>
-                        <a href="#" class="text-secondary-400 hover:text-primary-400 duration-150">
+                        <a href="/" aria-label="YouTube" class="text-secondary-400 hover:text-primary-400 duration-150">
                             <i class="bi bi-youtube"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="text-secondary-400 hover:text-primary-400 duration-150">
+                        <a href="/" aria-label="X" class="text-secondary-400 hover:text-primary-400 duration-150">
                             <i class="bi bi-twitter-x"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="text-secondary-400 hover:text-primary-400 duration-150">
+                        <a href="/" aria-label="Instagram" class="text-secondary-400 hover:text-primary-400 duration-150">
                             <i class="bi bi-instagram"></i>
                         </a>
                     </li>
                 </ul>
             </nav>
         </div>
-        <hr class="border-secondary-500 my-8" />
+        <hr class="border-secondary-500" />
         <div class="w-full">
             <div class="text-center text-sm">
                 <p>
@@ -51,5 +50,5 @@ import ContainerSection from "./ContainerSection.astro";
                 </p>
             </div>
         </div>
-    </ContainerSection>
+    </Container>
 </footer>

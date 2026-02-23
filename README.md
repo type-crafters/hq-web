@@ -1,3 +1,1 @@
-# TypeCrafters HQ
-
-## Landing Page
+# TypeCrafters HQ Landing Site
