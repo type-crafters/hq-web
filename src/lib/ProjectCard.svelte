@@ -3,13 +3,13 @@
     import { ProjectStatus } from "$enum/ProjectStatus";
 
     const statusColors: Map<ProjectStatus, string> = new Map([
-        [ProjectStatus.Planning, "bg-info-600"],
-        [ProjectStatus.Development, "bg-teal-500"],
-        [ProjectStatus.Testing, "bg-violet-400"],
-        [ProjectStatus.EarlyAccess, "bg-orange-400"],
-        [ProjectStatus.Available, "bg-success-600"],
-        [ProjectStatus.Paused, "bg-warning-600"],
-        [ProjectStatus.Canceled, "bg-red-700/70"],
+        [ProjectStatus.Planning, "bg-sky-600"],
+        [ProjectStatus.Development, "bg-teal-600"],
+        [ProjectStatus.Testing, "bg-violet-500"],
+        [ProjectStatus.EarlyAccess, "bg-yellow-600"],
+        [ProjectStatus.Available, "bg-emerald-600"],
+        [ProjectStatus.Paused, "bg-gray-600"],
+        [ProjectStatus.Canceled, "bg-red-600/70"],
     ]);
 
     const {
